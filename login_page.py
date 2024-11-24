@@ -1,6 +1,6 @@
 import streamlit as st
 from firebase_config import auth, db
-
+from fitfeast_home import fitfeast_home
 # Ensure session state is initialized
 if "page" not in st.session_state:
     st.session_state["page"] = "login"  # Default page is login
@@ -39,4 +39,4 @@ def login_page():
 if st.session_state["page"] == "login":
     login_page()
 elif st.session_state["page"] == "home":
-    home_page()
+    fitfeast_home()
